@@ -1,3 +1,4 @@
+from __future__ import annotations
 """UCI protocol interface for Gambit.
 
 Implements the Universal Chess Interface (UCI) so Gambit can be plugged into
@@ -22,7 +23,6 @@ Run as a subprocess::
 Or register with a GUI as a UCI engine pointing to this script.
 """
 
-from __future__ import annotations
 
 import argparse
 import sys

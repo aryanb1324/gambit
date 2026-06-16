@@ -1,3 +1,4 @@
+from __future__ import annotations
 """Phase 1: supervised pretraining on Lichess game data.
 
 Trains GambitNet to predict the move played in positions from strong games
@@ -24,7 +25,6 @@ Example
 ... )
 """
 
-from __future__ import annotations
 
 import os
 from typing import Optional

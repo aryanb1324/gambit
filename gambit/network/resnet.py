@@ -1,3 +1,4 @@
+from __future__ import annotations
 """GambitNet — ResNet with policy and value heads.
 
 Architecture
@@ -8,7 +9,6 @@ Policy : Conv(2, 1×1) → BN → ReLU → flatten → Linear(128, action_size)
 Value  : Conv(1, 1×1) → BN → ReLU → flatten → Linear(64, 64) → ReLU → Linear(64, 1) → Tanh
 """
 
-from __future__ import annotations
 
 import os
 from typing import Optional

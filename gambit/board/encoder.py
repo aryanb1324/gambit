@@ -1,3 +1,4 @@
+from __future__ import annotations
 """Board encoder — converts a chess.Board into a float32 tensor of shape (17, 8, 8).
 
 Plane layout
@@ -18,7 +19,6 @@ Total action size used throughout the project: 4096 (queen-promotion shares the
 base move index; under-promotions are rare and handled via offset mapping).
 """
 
-from __future__ import annotations
 
 from typing import Optional
 

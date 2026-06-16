@@ -1,3 +1,4 @@
+from __future__ import annotations
 """Phase 3: self-play reinforcement learning loop.
 
 Each iteration:
@@ -20,7 +21,6 @@ Stores up to ``max_size`` tuples::
      outcome:      float)              ← +1 / 0 / -1 from current player's PoV
 """
 
-from __future__ import annotations
 
 import os
 import random

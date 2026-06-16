@@ -1,3 +1,4 @@
+from __future__ import annotations
 """Arena: Gambit vs Stockfish evaluation.
 
 Plays a series of games between Gambit (MCTS + GambitNet) and Stockfish at a
@@ -14,7 +15,6 @@ Example
 >>> print(results)
 """
 
-from __future__ import annotations
 
 import math
 from typing import Optional

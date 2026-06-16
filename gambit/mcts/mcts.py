@@ -1,3 +1,4 @@
+from __future__ import annotations
 """Monte Carlo Tree Search (MCTS) for Gambit.
 
 Implements AlphaZero-style PUCT search:
@@ -12,7 +13,6 @@ Dirichlet noise (alpha=0.3, epsilon=0.25) is mixed into the root priors at
 expansion time to encourage exploration during self-play.
 """
 
-from __future__ import annotations
 
 import math
 from typing import Optional
