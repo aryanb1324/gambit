@@ -175,6 +175,7 @@ def train_selfplay(
     batch_size:             int   = 512,
     num_simulations:        int   = 400,
     device:                 str   = "cuda" if torch.cuda.is_available() else "cpu",
+    progress_callback       = None,
 ) -> None:
     """Main self-play reinforcement learning loop.
 
@@ -267,7 +268,15 @@ def train_selfplay(
             f"buffer_size={len(buffer)}"
         )
 
-        # ── 3. Checkpoint ─────────────────────────────────────────────────
+        # ── 3. Progress callback ─────────────────────────────────────────
+        if progress_callback is not None:
+            progress_callback(iteration, num_iterations, {
+                'policy_loss': avg_p,
+                'value_loss': avg_v,
+                'avg_game_length': avg_len,
+            })
+
+        # ── 4. Checkpoint ─────────────────────────────────────────────────
         ckpt_path = os.path.join(output_dir, f"selfplay_iter{iteration:04d}.pt")
         save_checkpoint(model, optimizer, global_step, ckpt_path)
 
