@@ -1,0 +1,8 @@
+chess>=1.10.0
+torch>=2.0.0
+numpy>=1.24.0
+h5py>=3.9.0
+tqdm>=4.65.0
+stockfish>=3.28.0
+requests>=2.31.0
+zstandard>=0.21.0
